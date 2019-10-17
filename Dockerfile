@@ -2,8 +2,11 @@ FROM centos:8
 
 MAINTAINER Mats Rynge "rynge@isi.edu"
 
-RUN dnf -y upgrade
-RUN dnf -y install epel-release
+# base dnf/yum setup
+RUN dnf -y update && \
+    dnf -y install 'dnf-command(config-manager)' && \
+    yum -y config-manager --set-enabled PowerTools && \
+    dnf -y install epel-release
 
 # osg repo - not available yet
 #RUN dnf -y install http://repo.opensciencegrid.org/osg/3.5/osg-3.5-el8-release-latest.rpm
