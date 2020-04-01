@@ -54,13 +54,13 @@ RUN dnf -y install --allowerasing \
            libXpm-devel \
            libXt \
            mesa-libGL-devel \
-           python3-numpy \
            openssh \
            openssh-server \
            python3-devel \
+           python3-numpy \
+           python3-scipy \
            redhat-lsb-core \
            rsync \
-           python3-scipy \
            subversion \
            tcl-devel \
            tcsh \
