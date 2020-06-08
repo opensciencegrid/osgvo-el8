@@ -85,6 +85,7 @@ RUN dnf clean all
 # required directories
 RUN for MNTPOINT in \
         /cvmfs \
+        /ceph \
         /hadoop \
         /hdfs \
         /lizard \
