@@ -1,6 +1,10 @@
 FROM centos:8
 
-MAINTAINER Mats Rynge "rynge@isi.edu"
+LABEL opensciencegrid.name="EL 8"
+LABEL opensciencegrid.description="Enterprise Linux (CentOS) 8 base image"
+LABEL opensciencegrid.url="https://www.centos.org/"
+LABEL opensciencegrid.category="Base"
+LABEL opensciencegrid.definition_url="https://github.com/opensciencegrid/osgvo-el8"
 
 # base dnf/yum setup
 RUN dnf -y update && \
