@@ -35,6 +35,8 @@ RUN dnf -y install --allowerasing \
            gcc-gfortran \
            git \
            glib2-devel \
+           glibc-langpack-en \
+           glibc-locale-source \
            graphviz \
            gsl-devel \
            java-11-openjdk \
