@@ -9,7 +9,7 @@ LABEL opensciencegrid.definition_url="https://github.com/opensciencegrid/osgvo-e
 # base dnf/yum setup
 RUN dnf -y update && \
     dnf -y install 'dnf-command(config-manager)' && \
-    yum -y config-manager --set-enabled PowerTools && \
+    yum -y config-manager --set-enabled powertools && \
     dnf -y install epel-release
 
 # osg repo - not available yet
