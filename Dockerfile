@@ -12,11 +12,11 @@ RUN dnf -y update && \
     yum -y config-manager --set-enabled powertools && \
     dnf -y install epel-release
 
-# osg repo - not available yet
-#RUN dnf -y install http://repo.opensciencegrid.org/osg/3.5/osg-3.5-el8-release-latest.rpm
+# osg repo
+RUN dnf -y install https://repo.opensciencegrid.org/osg/3.6/osg-3.6-el8-release-latest.rpm
    
 # pegasus repo - not available yet
-# RUN echo -e "# Pegasus\n[Pegasus]\nname=Pegasus\nbaseurl=http://download.pegasus.isi.edu/wms/download/rhel/7/\$basearch/\ngpgcheck=0\nenabled=1\npriority=50" >/etc/dnf.repos.d/pegasus.repo
+RUN echo -e "# Pegasus\n[Pegasus]\nname=Pegasus\nbaseurl=http://download.pegasus.isi.edu/wms/download/rhel/8/\$basearch/\ngpgcheck=0\nenabled=1\npriority=50" >/etc/yum.repos.d/pegasus.repo
 
 # well rounded basic system to support a wide range of user jobs
 RUN dnf -y groupinstall "Development Tools" \
@@ -62,11 +62,15 @@ RUN dnf -y install --allowerasing \
            mesa-libGL-devel \
            openssh \
            openssh-server \
+           osg-ca-certs \
+           osg-wn-client \
+           pegasus \
            python3-devel \
            python3-numpy \
            python3-scipy \
            redhat-lsb-core \
            rsync \
+           stashcache-client \
            subversion \
            tcl-devel \
            tcsh \
