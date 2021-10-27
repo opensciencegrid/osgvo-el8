@@ -122,4 +122,3 @@ COPY osg-labels.json /.singularity.d/labels.json
 # build info
 RUN echo "Timestamp:" `date --utc` | tee /image-build-info.txt
 
-
