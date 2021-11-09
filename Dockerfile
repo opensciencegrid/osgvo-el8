@@ -79,7 +79,6 @@ RUN dnf -y install --allowerasing \
            wget \
            which
 
-
 # CA certs
 RUN mkdir -p /etc/grid-security && \
     cd /etc/grid-security && \
@@ -87,11 +86,6 @@ RUN mkdir -p /etc/grid-security && \
     wget -nv https://download.pegasus.isi.edu/containers/certificates.tar.gz && \
     tar xzf certificates.tar.gz && \
     rm -f certificates.tar.gz
-
-# stashcp
-RUN python3 -m pip install --upgrade pip && \
-    python3 -m pip install setuptools && \
-    python3 -m pip install stashcp
 
 # Cleaning caches to reduce size of image
 RUN dnf clean all
