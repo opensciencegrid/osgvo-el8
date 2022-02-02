@@ -1,4 +1,4 @@
-FROM centos:8
+FROM rockylinux:8
 
 LABEL opensciencegrid.name="EL 8"
 LABEL opensciencegrid.description="Enterprise Linux (CentOS) 8 base image"
@@ -41,6 +41,7 @@ RUN dnf -y install --allowerasing \
            gsl-devel \
            java-11-openjdk \
            java-11-openjdk-devel \
+           jq \
            libgfortran \
            libGLU \
            libgomp \
