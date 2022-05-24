@@ -22,7 +22,7 @@ RUN echo -e "# Pegasus\n[Pegasus]\nname=Pegasus\nbaseurl=http://download.pegasus
 RUN dnf -y groupinstall "Development Tools" \
                         "Scientific Support"
 
-RUN dnf -y install --allowerasing \
+RUN dnf -y install --allowerasing --enablerepo=osg-testing \
            redhat-lsb \
            bc \
            binutils \
@@ -71,7 +71,7 @@ RUN dnf -y install --allowerasing \
            python3-scipy \
            redhat-lsb-core \
            rsync \
-           stashcache-client \
+           stashcp \
            subversion \
            tcl-devel \
            tcsh \
